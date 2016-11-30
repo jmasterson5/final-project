@@ -28,7 +28,7 @@ To get 100% on the scoping phase, you must:
 
 :ballot_box_with_check: Create an [Issue](https://github.com/cop1000/final-project/issues/new) in this repository with your project proposal.
   * The **Issue** will automatically populate with some fields for you to fill in. Answer the questions that autopopulate.
-  * If you're working with another student, say so in this issue. Only one deliverable is required per team. 
+  * If you're working with another student, say so in this issue. Only one deliverable is required per team.
   * Feel free to add comments about what you'd like some feedback from classmates or the professor on.
 
 :ballot_box_with_check: Provide feedback to **Issues** opened by your classmates. **You need to provide feedback to at least 3 classmates for credit.** Some useful feedback would be:
@@ -60,11 +60,11 @@ To get 100% on the implementation phase, you must:
 
 :ballot_box_with_check: Add your program to the `devel` folder.
 
-:ballot_box_with_check: Update the `README.md` file to your `devel` folder explaining, in detail, how to run your program. Instructions are in the starter file I placed in the `devel` folder.
+:ballot_box_with_check: Update the `README.md` file in your `devel` folder explaining, in detail, how to run your program. Instructions are in the starter file I placed in the `devel` folder.
 
 :ballot_box_with_check: Once finished, commit any final changes like you've done for previous projects, and sync your changes up to GitHub.
 
-:ballot_box_with_check: Create a pull request to turn in this assignment. In your pull request, include questions you'd like your classmates to give you feedback on.
+:ballot_box_with_check: Create a pull request to turn in this assignment. In your pull request, include questions you'd like your classmates to give you feedback on. If you're creating the Pull Request on GitHub.com, the `base` branch should be `master` and the `compare` branch should be the branch you created.
 
 :ballot_box_with_check: Give feedback to your classmates via the [open pull requests page](https://github.com/cop1000/final-project/pulls). **You need to provide feedback to at least 3 classmates for credit.** Some useful feedback would be:
   * Does the classmate's project run on your computer? Don't be afraid to ask for help if it doesn't, this is a learning experience for both you and the other student.
