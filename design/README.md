@@ -1,0 +1,1 @@
+Formalize the design you discussed in the scoping phase by adding one or more files to this `design` folder. These files can be outlines, diagrams, written descriptions of programming structure, pseudocode, or anything that helps you plan out **BEFORE** you begin coding.
