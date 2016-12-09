@@ -1,3 +1,7 @@
 # Instructions for Running my Project
-
-Replace this text with the instructions your classmates will need to run your project. A complete stranger should be able to follow these instructions, so don't be afraid to include videos, screenshots, diagrams, text, whatever helps!
+1. open the final project branch
+2. open the devel folder
+3.right click on the index file
+4. scroll down to "Open with..."
+5. Select a browser while in "Open with..."
+6. enjoy the project
