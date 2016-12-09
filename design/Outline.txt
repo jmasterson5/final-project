@@ -1,0 +1,5 @@
+-Create a homepage
+-Add info on the series of FF on homepage
+-Make sure each game gets it's own page
+-Make each game's page accessible from the homepage
+ 

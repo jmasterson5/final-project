@@ -1,0 +1,71 @@
+<!DOCTYPE>
+<html>
+<style>
+  .bordered {
+    width: 1000px;
+    height: 190px;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+</style>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<title>Home</title>
+</head>
+
+<body>
+ <body style="background-color:white;">	
+
+
+<div style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Final_Fantasy_wordmark.svg/2000px-Final_Fantasy_wordmark.svg.png" style="left:50%; width:60%; height:22%; "/></div>
+
+<div style="text-align: center;"><img src="http://www.videogamesblogger.com/wp-content/uploads/2009/11/chaos-vs-cosmos-wallpaper-dissidia-by-psychosquall.jpg" style="left:20%; right:20%; width:50%; height:78%;"/></div>
+
+<div style="text-align: center;"><h1>Welcome to the homepage!</h1></div>
+
+<div class="bordered">
+<p>Final Fantasy is a fantasy/science fiction role playing video game series created by Hironobu Sakaguchi and developed and owned by Square Enix. The series has been around since 1987 and there are 15 games in the main series as well as multiple spin offs. Each game has a different story, and they can be played in any order. Which means you dont have to play Final Fantasy 1 to undestand the story of Final Fantasy 2 and so on. Unless a game has a direct sequel such as Final Fantasy 10 which has a sequel named Final Fantasy 10-2, or Final Fantasy 13 which has 2 direct sequels the games can be played in any order. Below you will find information regarding four different Final Fantasy games. In order to learn more about each game, click the logo of the game you wish to view. *Pictures and Info were taken from Final Fantasy Wiki* </p> 
+</div>
+
+<div>
+<a href="Final Fantasy 9.html"><img style="float: right; margin: 12px 12px 50px 50px;" src="http://3.bp.blogspot.com/-6slVt8eQesc/TifIVc6gi8I/AAAAAAAAV20/CMMYCetl2mc/s1600/logo_final_fantasy_ix.jpg" width="420"></a>
+
+
+<a href="Final Fantasy 7.html"><img style="float: right; margin: 12px 12px 60px 60px;" src="https://caffeinecrew.files.wordpress.com/2014/08/ffvii-banner1.jpg" width="400" height="180"></a>
+
+<a href="Final Fantasy 6.html"><img style="float: right; margin: 12px 12px 60px 60px;" src="http://img2.wikia.nocookie.net/__cb20100721022328/finalfantasy/images/archive/4/49/20100915152443!Ff6-logo.jpg" width="400"></a>
+
+<a href="Final Fantasy 4.html"><img style="float: right; margin: 12px 12px 60px 60px;" src="http://vignette2.wikia.nocookie.net/finalfantasy/images/c/ce/Ff4_logo.png/revision/latest?cb=20120211045342" width="400"></a>
+</div>
+
+<form>
+<textarea id="words" rows="10" cols="20">Enter comment</textarea>
+<input type="button" onclick="getwords()" value="Enter" /> <br>
+<p id="para"></p>
+</form>
+
+<script type="text/javascript">
+function getwords() {
+  text = words.value;
+  document.getElementById("para").innerHTML += '<p>'+text
+  document.getElementById("words").value = "enter"
+}
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,3 +1,7 @@
 # Instructions for Running my Project
 
-Replace this text with the instructions your classmates will need to run your project. A complete stranger should be able to follow these instructions, so don't be afraid to include videos, screenshots, diagrams, text, whatever helps!
+Select the index.html file and open it with the web browser of your choice.
+
+You can navigate through the site by clicking the logo of the game you wish to view.
+
+If at any point you would like to go back to the homepage you can click the "Home" button located at the very top, and very bottom of each game's page.
