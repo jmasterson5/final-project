@@ -1,0 +1,190 @@
+<HTML> 
+<HEAD> 
+<TITLE>Personality Quiz</TITLE> 
+<script language="javascript"> 
+
+var Quest = new Array(4);   
+
+function populate() { 
+ 
+  for(var i=0; i<10; i++) { Quest[i]=0; } 
+} 
+
+function total() {  
+  myScore=0; 
+  for (var i=0; i<10; i++) { myScore=myScore+Quest[i]; } 
+  analyzer(myScore); 
+} 
+myContents = new Array();  
+myContents[0] = "Tom Clancy’s Ghost Recon Wildlands";//4423
+myContents[1] = "Tom Clancy’s Rainbow Siege Six";//4344
+myContents[2] = "Mafia 3";//4241
+myContents[3] = "Tom Clancy’s The Division";//4123
+myContents[4] = "Titanfall 2";//4112
+myContents[5] = "The Elder Scrolls V Skyrim: Special Edition ";//3431
+myContents[6] = "Grand Theft Auto V"://3321
+myContents[7] = "Outlast 2";//3221
+myContents[8] = "Overwatch";//3122
+myContents[9] = "Pokemon Sun and Moon";//3112
+myContetns[10] = "Civilization VI";//2444
+myContents[11] = "Star Wars the Old Republic";//2332
+myContents[12] = "H1Z1 King of the Kill";//2231
+myContents[13] = "Counter Strike Global Offensive";//2214
+myContents[14] = "Mass Effect Andromeda";//2213
+myContents[15] = "Call of Duty: Infinite Warfare";//1434
+myContents[16] = "Rocket League";//1433
+myContents[17] = "Destiny";//1412
+myContents[18] = "NBA 2k17";//1333
+myContents[19] = "Battlefield 1";//1144
+
+function analyzer (myScore) { 
+ 
+  if (myScore>4423) { myContentsPtr = 0; } 
+  else { if (myScore >4344 ) { myContentsPtr = 1; } 
+    else { if(myScore>4241)  { myContentsPtr = 2; }  
+      else { if(myScore>4123) { myContentsPtr = 3; } 
+        else { if(myScore>4112) { myContentsPtr = 4; } 
+            else {if(myScore>3431 )} {myContentsPtr = 5;}
+                else{ if(myScore>3321)} {myContentsPtr = 6;}
+                  else{ if(myScore>3221)} {myContentsPtr = 7;}
+                       else{ if(myScore>3122)} {myContentsPtr =8;}
+                            else{ if(myScore>3112)} {myContentsPtr =9;}
+                                 else{ if(myScore>2444)} {myContentsPtr =10;}
+                                      else{ if(myScore>2332)} {myContentsPtr =11;}
+                                           else{ if(myScore>2231)} {myContentsPtr=12;}
+                                                else{ if(myScore>2214)} {myContentsPtr =13;}
+                                                     else{ if(myScore>2213)} {myContentsPtr=14;}
+                                                          else {if(myScore>1434)} {myContentsPtr=15;}
+                                                                else {if(myScore>1433)} {myContentsPtr=16;}
+                                                                      else{if(myScore>1412)} {myContentsPtr=17;}
+                                                                           else{if(myScore>1333)} {myContentsPtr=18;}
+                    else { myContentsPtr = 19; } 
+        } 
+      } 
+    } 
+  } 
+  myDisplay(myContents[myContentsPtr]) 
+} 
+
+function myDisplay(myContents) { 
+ 
+  alert(myContents); 
+} 
+
+function saver(q, points) { 
+ 
+  q=q-1; 
+  Quest[q]=points 
+} 
+
+</script> 
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+     
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    
+    .row.content {height: 450px}
+    
+    
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+     body{
+        background-color: green;
+    }
+    #main{
+        width: 80%;
+        max-width: 950px;
+        border: 1px red solid;
+        margin: auto;
+        padding: 10px;
+        Background color: red;
+        border-radius: 10px;
+         }
+    #header{
+        margin-top: 0;
+        border: 2px solid black;
+        padding: 5px;
+        height: 250px;
+        background: green;
+    }
+  </style>
+ 
+ 
+ 
+</HEAD> 
+
+<BODY onLoad="populate()"> 
+<FORM NAME="personalityForm"> 
+<span class="style1">What game should you buy for Christmas?</span><br> 
+<br> 
+
+<span class="style2"> 
+
+<span class="style3">1. Choose a Color:</span><br> 
+<span class="style6"> 
+<INPUT TYPE="RADIO" NAME="q1" onClick="saver(1,1)">Black<br> 
+<INPUT TYPE="RADIO" NAME="q1" onClick="saver(1,2)">White<br> 
+<INPUT TYPE="RADIO" NAME="q1" onClick="saver(1,3)">Brown<br> 
+<INPUT TYPE="RADIO" NAME="q1" onClick="saver(1,4)">Red<br>
+</span><br> 
+
+<span class="style3">2. Choose a TV show/network</span><br> 
+<span class="style6"> 
+<INPUT TYPE="RADIO" NAME="q2" onClick="saver(2,10)" >Lost<br> 
+<INPUT TYPE="RADIO" NAME="q2" onClick="saver(2,20)">Gotham<br> 
+<INPUT TYPE="RADIO" NAME="q2" onClick="saver(2,30)">ESPN<br> 
+<INPUT TYPE="RADIO" NAME="q2" onClick="saver(2,40)">History Channel<br> 
+</span><br> 
+
+<span class="style3">3. What are you?</span><br> 
+<span class="style6"> 
+<INPUT TYPE="RADIO" NAME="q3" onClick="saver(3,100)">Hero<br> 
+<INPUT TYPE="RADIO" NAME="q3" onClick="saver(3,200)">Villain<br> 
+<INPUT TYPE="RADIO" NAME="q3" onClick="saver(3,300)">I Don't Care<br> 
+<INPUT TYPE="RADIO" NAME="q3" onClick="saver(3,400)">I am whatever i want to be.<br>  
+</span><br> 
+
+<span class="style3">4. what is you preffered gaming device or phrase from below?</span><br> 
+<span class="style6"> 
+<INPUT TYPE="RADIO" NAME="q4" onClick="saver(4,1000)">PS4/Xbox1<br> 
+<INPUT TYPE="RADIO" NAME="q4" onClick="saver(4,2000)">PC<br> 
+<INPUT TYPE="RADIO" NAME="q4" onClick="saver(4,3000)">I just like games.<br> 
+<INPUT TYPE="RADIO" NAME="q4" onClick="saver(4,4000)">I Don't Care.<br> 
+</span><br> 
+ 
+
+<br> 
+<INPUT TYPE="button" NAME="result" Value="Click here to see your result" onClick="total()"> 
+<span> 
+
+</FORM> 
+</BODY> 
+</HTML>  //credit to W3schools for providing the bootstrap template. credit to jmrker from http://www.webdeveloper.com/forum/showthread.php?147109-Javascript-Personality-Quiz-help for providing the interactive quize code to which i heavily modified but still credit is due.
