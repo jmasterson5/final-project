@@ -22,11 +22,11 @@ myContents[2] = "Mafia 3";//4241
 myContents[3] = "Tom Clancy’s The Division";//4123
 myContents[4] = "Titanfall 2";//4112
 myContents[5] = "The Elder Scrolls V Skyrim: Special Edition ";//3431
-myContents[6] = "Grand Theft Auto V"://3321
+myContents[6] = "Grand Theft Auto V";//3321
 myContents[7] = "Outlast 2";//3221
 myContents[8] = "Overwatch";//3122
 myContents[9] = "Pokemon Sun and Moon";//3112
-myContetns[10] = "Civilization VI";//2444
+myContents[10] = "Civilization VI";//2444
 myContents[11] = "Star Wars the Old Republic";//2332
 myContents[12] = "H1Z1 King of the Kill";//2231
 myContents[13] = "Counter Strike Global Offensive";//2214
@@ -37,32 +37,28 @@ myContents[17] = "Destiny";//1412
 myContents[18] = "NBA 2k17";//1333
 myContents[19] = "Battlefield 1";//1144
 
-function analyzer (myScore) { 
+function analyzer (myScore) {
  
-  if (myScore>4423) { myContentsPtr = 0; } 
-  else { if (myScore >4344 ) { myContentsPtr = 1; } 
-    else { if(myScore>4241)  { myContentsPtr = 2; }  
-      else { if(myScore>4123) { myContentsPtr = 3; } 
-        else { if(myScore>4112) { myContentsPtr = 4; } 
-            else {if(myScore>3431 )} {myContentsPtr = 5;}
-                else{ if(myScore>3321)} {myContentsPtr = 6;}
-                  else{ if(myScore>3221)} {myContentsPtr = 7;}
-                       else{ if(myScore>3122)} {myContentsPtr =8;}
-                            else{ if(myScore>3112)} {myContentsPtr =9;}
-                                 else{ if(myScore>2444)} {myContentsPtr =10;}
-                                      else{ if(myScore>2332)} {myContentsPtr =11;}
-                                           else{ if(myScore>2231)} {myContentsPtr=12;}
-                                                else{ if(myScore>2214)} {myContentsPtr =13;}
-                                                     else{ if(myScore>2213)} {myContentsPtr=14;}
-                                                          else {if(myScore>1434)} {myContentsPtr=15;}
-                                                                else {if(myScore>1433)} {myContentsPtr=16;}
-                                                                      else{if(myScore>1412)} {myContentsPtr=17;}
-                                                                           else{if(myScore>1333)} {myContentsPtr=18;}
-                    else { myContentsPtr = 19; } 
-        } 
-      } 
-    } 
-  } 
+  if (myScore>4423) myContentsPtr = 0;
+  else if (myScore >4344 ) myContentsPtr = 1; 
+  else if(myScore>4241) myContentsPtr = 2;  
+  else if(myScore>4123) myContentsPtr = 3; 
+  else if(myScore>4112) myContentsPtr = 4; 
+  else if(myScore>3431 ) myContentsPtr = 5;
+  else if(myScore>3321) myContentsPtr = 6;
+  else if(myScore>3221) myContentsPtr = 7;
+  else if(myScore>3122) myContentsPtr =8;
+  else if(myScore>3112) myContentsPtr =9;
+  else if(myScore>2444) myContentsPtr =10;
+  else if(myScore>2332) myContentsPtr =11;
+  else if(myScore>2231) myContentsPtr=12;
+  else if(myScore>2214) myContentsPtr =13;
+  else if(myScore>2213) myContentsPtr=14;
+  else if(myScore>1434) myContentsPtr=15;
+  else if(myScore>1433) myContentsPtr=16;
+  else if(myScore>1412) myContentsPtr=17;
+  else if(myScore>1333) myContentsPtr=18;
+  else myContentsPtr = 19; 
   myDisplay(myContents[myContentsPtr]) 
 } 
 
