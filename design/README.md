@@ -1,4 +1,8 @@
-A few of the code snippets
+# CodeMirror
+
+[CodeMirror](https://github.com/codemirror/codemirror) found on github, is a very cool way to display useful coding into an HTML page. It is widely used for demonstrating, teaching, and learning to code. I Plan to make use of this with a live ocding portion of my website.
+
+## A few of the code snippets
 
 
     <html>
