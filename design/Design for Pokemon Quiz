@@ -1,0 +1,5 @@
+I don't have much to say on the first part of this. Basically I'm going to be using the most popular
+pokemon as the answers for this quiz. First we use the amount of letters in your
+ name and it's added to the total. The other questions will add numbers to the overall total. I'm goint to be using
+ an input radio with values attached. At the end when you click submit,
+  an image of your pokemon depending on the value with a picture and music will appear.

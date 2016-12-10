@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+body {
+background-color: darkred;
+font-family: Helvetica;
+}
+
+#main {
+width: 90%;
+max-width: 1200px;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color: #fef6f4;
+border-radius: 10px;
+}
+
+#header {
+margin-top: 0;
+border: 2px solid black;
+padding: 5px;
+height: 250px;
+background: beige;
+background-image: url("http://static1.businessinsider.com/image/5798d6b1dd08951e578b47e6-1702/gcta.png");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+color: white;
+}
+</style>
+</head>
+<body>
+<div id="main">
+<div id="header">
+<h1></h1>
+</div>
+
+<embed name="Pokemon" src="theme.mp3" loop="true" hidden="true" autostart="true">
+
+<h1>Pokemon Quiz</h1>
+
+<form  id="form1" action=" ">
+<p>Whats describes your color choices?</p>
+<input type="radio" name="Q1" value="2" />A dark color<br />
+<input type="radio" name="Q1" value="0" />A light color<br />
+
+
+<p>You see a cat up a Tree, What do you do?</p>
+<input type="radio" name="Q2" value="2" />Leave it be.<br />
+<input type="radio" name="Q2" value="0" />Climb up to get it down.<br />
+
+
+<p>Which do you prefer?</p>
+<input type="radio" name="Q3" value="2" />A sword<br />
+<input type="radio" name="Q3" value="0" />A shield<br />
+
+
+<p>What word describes you?</p>
+<input type="radio" name="Q4" value="2" />Powerful.<br />
+<input type="radio" name="Q4" value="0" />Wise.<br />
+
+<p>Who's the Coolest?</p>
+<input type="radio" name="Q5" value="2" />You.<br />
+<input type="radio" name="Q5" value="0" />The creator of this Quiz.<br />
+
+
+<input type="submit" value="Submit">
+</form>
+
+
+
+
+Your POKEMON is!:<p id="Pokemon3"></p>
+</div>
+
+<script>
+
+
+
+
+document.getElementById("form1").onsubmit=function() {
+       Q1 = parseInt(document.querySelector('input[name = "Q1"]:checked').value);
+	   Q2 = parseInt(document.querySelector('input[name = "Q2"]:checked').value);
+	   Q3 = parseInt(document.querySelector('input[name = "Q3"]:checked').value);
+	   Q4 = parseInt(document.querySelector('input[name = "Q4"]:checked').value);
+	   Q5 = parseInt(document.querySelector('input[name = "Q5"]:checked').value);
+
+
+
+	   result = Q1 + Q2 + Q3 + Q4 + Q5 ;
+
+
+
+
+
+
+
+  if (result == 10) {Pokemon2 = "Mewtwo.<br /><img src='mewtwo.jpg' width='300' />"};
+if (result == 0 ) {Pokemon2 = "Mew.<br /><img src='151.png' width='300' />"};
+if (result == 6 ) {Pokemon2 = "Lucario.<br /><img src='lucario.jpg' width='300' />"};
+if (result == 8 ) {Pokemon2 = "Gengar.<br /><img src='Gengar.png' width='300' />"};
+if (result == 4) {Pokemon2 = "Pikachu.<br /><img src='pikachu.png' width='300' />"};
+if (result == 2) {Pokemon2 = "Greninja.<br /><img src='Greninja.png' width='300' />"};
+
+
+document.getElementById("Pokemon3").innerHTML = Pokemon2;
+
+return false;
+}
+</script>
+</body>
+
+</body>
+</html>
