@@ -1,3 +1,3 @@
 # Instructions for Running my Project
-
-Replace this text with the instructions your classmates will need to run your project. A complete stranger should be able to follow these instructions, so don't be afraid to include videos, screenshots, diagrams, text, whatever helps!
+1. Access the program by clicking on the "generate" file.
+2. Scroll down to the middle, hit the generate button and six random pokemon should appear.
