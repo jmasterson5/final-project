@@ -1,3 +1,5 @@
 # Instructions for Running my Project
 
-Replace this text with the instructions your classmates will need to run your project. A complete stranger should be able to follow these instructions, so don't be afraid to include videos, screenshots, diagrams, text, whatever helps!
+1. Select your birth month from the drop down menu
+2. Select your birth day from the drop down menu
+3. Click "What's your hacker name?"
