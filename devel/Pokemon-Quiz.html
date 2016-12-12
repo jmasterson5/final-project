@@ -9,13 +9,18 @@ font-family: Helvetica;
 }
 
 #main {
-width: 90%;
-max-width: 1200px;
-border: 1px gray solid;
-margin: auto;
-padding: 10px;
-background-color: #fef6f4;
-border-radius: 10px;
+  width: 90%;
+  max-width: 1200px;
+  border: 1px gray solid;
+  margin: auto;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, .75);
+  border-radius: 10px;
+  box-shadow: rgba(31, 61, 31, 0.9) 20px 0px 35px,
+             	rgba(31, 61, 31, 0.9) -20px 0px 35px;
+  width: 50%;
+  font-size: 18px;
+
 }
 
 #header {
@@ -27,7 +32,9 @@ background: beige;
 background-image: url("http://static1.businessinsider.com/image/5798d6b1dd08951e578b47e6-1702/gcta.png");
 background-repeat: no-repeat;
 background-size: 100% 100%;
+background-position: fixed;
 color: white;
+box-shadow: inset rgba(31, 61, 31, 0.9) 0px 0px 20px;
 }
 </style>
 </head>
@@ -61,9 +68,30 @@ color: white;
 <input type="radio" name="Q4" value="2" />Powerful.<br />
 <input type="radio" name="Q4" value="0" />Wise.<br />
 
+<p>Which is better suited for you?</p>
+<input type="radio" name="Q5" value="2" />A Nightmare<br />
+<input type="radio" name="Q5" value="0" />A Dream<br />
+
+<p>Where would they find you?p>
+<input type="radio" name="Q6" value="2" />An Island<br />
+<input type="radio" name="Q6" value="0" />A Desert.<br />
+
+<p>Would you rather be...</p>
+<input type="radio" name="Q7" value="2" />alone.<br />
+<input type="radio" name="Q7" value="0" />With friends.<br />
+
+<p>A trainer just stole your pokemon! What do you do?</p>
+<input type="radio" name="Q8" value="2" />Go fight them.<br />
+<input type="radio" name="Q8" value="0" />Throw a Pokemon to fight them.<br />
+
+<p>You just got a million dollars, You can only do one of the options with it.</p>
+<input type="radio" name="Q9" value="2" />Spend it all at once.<br />
+<input type="radio" name="Q9" value="0" />Only able to use 10$ a day.<br />
+
+
 <p>Who's the Coolest?</p>
-<input type="radio" name="Q5" value="2" />You.<br />
-<input type="radio" name="Q5" value="0" />The creator of this Quiz.<br />
+<input type="radio" name="Q10" value="2" />You.<br />
+<input type="radio" name="Q10" value="0" />The creator of this Quiz.<br />
 
 
 <input type="submit" value="Submit">
@@ -86,10 +114,15 @@ document.getElementById("form1").onsubmit=function() {
 	   Q3 = parseInt(document.querySelector('input[name = "Q3"]:checked').value);
 	   Q4 = parseInt(document.querySelector('input[name = "Q4"]:checked').value);
 	   Q5 = parseInt(document.querySelector('input[name = "Q5"]:checked').value);
+     Q6 = parseInt(document.querySelector('input[name = "Q6"]:checked').value);
+     Q7 = parseInt(document.querySelector('input[name = "Q7"]:checked').value);
+     Q8 = parseInt(document.querySelector('input[name = "Q8"]:checked').value);
+     Q9 = parseInt(document.querySelector('input[name = "Q9"]:checked').value);
+     Q10 = parseInt(document.querySelector('input[name = "Q10"]:checked').value);
 
 
 
-	   result = Q1 + Q2 + Q3 + Q4 + Q5 ;
+	   result = Q1 + Q2 + Q3 + Q4 + Q5 + Q6 + Q7 + Q8 + Q9 + Q10 ;
 
 
 
@@ -97,14 +130,17 @@ document.getElementById("form1").onsubmit=function() {
 
 
 
-  if (result == 10) {Pokemon2 = "Mewtwo.<br /><img src='mewtwo.jpg' width='300' />"};
+  if (result == 10) {Pokemon2 = "Charizard.<br /><img src='Charizard.png' width='300' />"};
 if (result == 0 ) {Pokemon2 = "Mew.<br /><img src='151.png' width='300' />"};
 if (result == 6 ) {Pokemon2 = "Lucario.<br /><img src='lucario.jpg' width='300' />"};
 if (result == 8 ) {Pokemon2 = "Gengar.<br /><img src='Gengar.png' width='300' />"};
 if (result == 4) {Pokemon2 = "Pikachu.<br /><img src='pikachu.png' width='300' />"};
 if (result == 2) {Pokemon2 = "Greninja.<br /><img src='Greninja.png' width='300' />"};
-
-
+if (result == 12) {Pokemon2 = "Mimikyu.<br /><img src='mimikyu.png' width='300' />"};
+if (result == 14) {Pokemon2 = "Swampert.<br /><img src='swampert.png' width='300' />"};
+if (result == 16) {Pokemon2 = "Genesect.<br /><img src='genesect.png' width='300' />"};
+if (result == 18) {Pokemon2 = "Mewtwo.<br /><img src='mewtwo.jpg' width='300' />"};
+if (result == 20) {Pokemon2 = "Darkrai.<br /><img src='darkrai.png' width='300' />"};
 document.getElementById("Pokemon3").innerHTML = Pokemon2;
 
 return false;
