@@ -180,24 +180,80 @@
     </section>
 
     <!-- Contact Section -->
+
+      <script language="javascript">
+        var travelTime;
+
+        function getDropdownChoice()
+        {
+          document.timeTest.displayDrop.value = '';
+          if (document.getElementById("SLS_rocket").checked)
+          {
+            var e = document.getElementById("dropChoices_SLS");
+            travelTime = e.options[e.selectedIndex].value;
+          }
+          else if(document.getElementById("S-IC_rocket").checked)
+          {
+            var e = document.getElementById("dropChoices_S-IC");
+            travelTime= e.options[e.selectedIndex].value;
+          }
+          else
+          {
+            travelTime = '';
+          }
+        }
+          function getButtonChoice(){
+            document.timeTest.displayDrop.value = travelTime;
+          }
+    </script>
+
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Travel Time</h2>
                     <hr class="star-primary">
+                    <h3>
+                      Select your rocket,
+                      planet, and
+                      click in the empty box
+                    </h3>
                 </div>
             </div>
             <div class="row">
-              <div class="col-lg-4 col-lg-offset-2">
-                <h3>SLS</h3>
+              <body>
+                <div class="clear">
+                </div>
+                <form name="timeTest">
+                  <input type="checkbox" name="SLS" id="SLS_rocket" value="rocket" />SLS<br />
+
+                  <select name="dropChoices_SLS" id="dropChoices_SLS" onchange="getDropdownChoice();">
+                    <option></option>
+                    <option value="46.13 Years">Wolf 1061c</option>
+                    <option value="3,744.56 Years">Kepler 442b</option>
+                    <option value="1,872.28 Years">Kepler 186f</option>
+                    <option value="78.9 Years">GJ 667Cc</option>
+                    <option value="4,012.03 Years">Kepler 62f</option>
+                    <option value="1,571.38 Years">Kepler 438b</option>
+                  </select><br />
+
+                  <form name="timeTest">
+                    <input type="checkbox" name="S-IC" id="S-IC_rocket" value="rocket" />S-IC<br />
+                    <select name="dropChoices_S-IC" id="dropChoices_S-IC" onchange="getDropdownChoice();">
+                    <option></option>
+                    <option value="55.85 Years">Wolf 1061c</option>
+                    <option value="4,532.76 Years">Kepler 442b</option>
+                    <option value="2,266.38 Years">Kepler 186f</option>
+                    <option value="95.51 Years">GJ 667Cc</option>
+                    <option value="4,856.53 Years">Kepler 62f</option>
+                    <option value="1,902.14 Years">Kepler 438b</option>
+                  </select><br />
+                  <input type="text" name="displayDrop" onclick="getButtonChoice();" />
+                </form>
+            </div>
+              <div class="clear"></div>
+            </body>
               </div>
-              <div class="col-lg-4">
-                <h3>S-IC</h>
-              </div>
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-              </div>
-          </div>
     </section>
 
     <!-- Footer -->
