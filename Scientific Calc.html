@@ -101,11 +101,11 @@ var functions = [ 'sqrt' , 'cos' , 'sin' , 'log10', 'ln'  ,'abs' ,'tan'  ]
 		else if(msg == 'number_parse_problem')
 			h = ('We had trouble understanding the following term ' + data);	
 		else if(msg == 'rpn_pop_pop')
-			h = ('We we were unable to process your expression')	
+			h = ('We were unable to process your expression')	
 		else if (msg == 'division_by_zero' )
 			h = (' You are trying to divide by zero!' );
 		else if (msg =='could_not_parse')
-			h = ('We we were unable to process your expression');
+			h = ('We were unable to process your expression');
 	 		$("#errmsg").css('display','block');
 				$("#errmsg").html( h )
 		}	
