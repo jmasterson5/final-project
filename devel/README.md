@@ -1,3 +1,3 @@
 # Instructions for Running my Project
 
-Replace this text with the instructions your classmates will need to run your project. A complete stranger should be able to follow these instructions, so don't be afraid to include videos, screenshots, diagrams, text, whatever helps!
+Just a normal Scientific Calculator. Try different equations and see if there is anything I might have missed.
