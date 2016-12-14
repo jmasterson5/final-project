@@ -1,0 +1,187 @@
+<!-- Save for later
+	https://refreshless.com/nouislider/slider-read-write/
+
+	https://developers.google.com/maps/documentation/javascript/places#places_photos
+-->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<style>
+			.ctr {
+				text-align: center;
+			}
+
+			.ctrForm {
+				margin: 0 auto;
+				width: 25%;
+			}
+
+			hr {
+				border-width: 2px;
+				width: 75%;
+			}
+
+			td {
+				font-family: 'Bungee', cursive;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- City Entry -->
+		<div class="ctr form-group" style="padding-top: 2%">
+			<button class="btn btn-primary" onClick="GetLocation();">Use My Current Location</button>
+			<form class="form-inline">
+				<label for="cityInput" style="font-size:30px"><b>City: </b></label>
+				<input class="ctr ctrForm form-control" type="text" id="cityInput" placeholder="Orlando"></input>
+			</form>
+			<button class="btn btn-default" onClick="GetData();">Submit</button>
+		</div>
+	<hr>
+		<!-- Current Weather -->
+		<div>
+			<h1 class="ctr" id="currWeather">City</h1>
+			<div class="ctr" id="currWeatherType"></div> <div class="ctr" id="currWeatherImg"></div>
+			<div class="ctr" id="currTemp">Current Temperature: Not loaded</div>
+		</div>
+	<hr>
+	<!-- Google Maps Location -->
+		<div class="ctr" style="">
+			<h2>Google Maps Location</h2>
+			<div id="gmap" class="ctrForm" style="width: 50%; height: 40%"></div>
+		</div>
+	<hr>
+		<!-- Weather Forecast -->
+		<div>
+			<h1 class="ctr">Weather Forecast<br/><small style="font-size: 12px">*100% Accuracy not guaranteed</small></h1>
+			<div class="table-responsive">
+				<table class="table">
+					<tr>
+						<th></th>
+						<th>Today</th>
+						<th id="day2">Day 2</th>
+						<th id="day3">Day 3</th>
+						<th id="day4">Day 4</th>
+						<th id="day5">Day 5</th>
+					</tr>
+					<tr>
+						<td><b>High</b></td>
+						<td id="d0hi"></td>
+						<td id="d1hi"></td>
+						<td id="d2hi"></td>
+						<td id="d3hi"></td>
+						<td id="d4hi"></td>
+					</tr>
+					<tr>
+						<td><b>Low</b></td>
+						<td id="d0lo"></td>
+						<td id="d1lo"></td>
+						<td id="d2lo"></td>
+						<td id="d3lo"></td>
+						<td id="d4lo"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
+
+<!-- OpenWeatherMap API Interaction -->
+<script>
+	var apiKey = "&APPID=ce8359d352d6ebe9d4ce9d25ab7ce3d0"; // API key;
+	var apiURL = "http://api.openweathermap.org/data/2.5/";
+	var units = "&units=imperial";
+	var city = "Orlando"; //Default: Orlando
+	var imgURL = "http://openweathermap.org/img/w/";
+	var geoLoc = {};
+
+	//When the document loads, get all available data immediately.
+	$( document ).ready( function() {
+		GetCurrentWeather(city);
+		GetForecast(city);
+		SetDays();
+	});
+
+	function GetData() {
+		city = document.getElementById("cityInput").value;
+		GetCurrentWeather(city);
+		GetForecast(city);
+	}
+
+	//Type should be weather, forecast, history, etc. In accordance with OpenWeatherMap.org's API
+	function CombineURL(type) {
+		return apiURL + type + apiKey;
+	}
+
+	//Verifies city not null, gets JSON current weather data and then displays in HTML
+	function GetCurrentWeather(city, lat, lon) {
+		if(city != null) {
+			currentWeatherURL = CombineURL("weather?q=" + city + units);
+		} else if(lat && lon != null) {
+			currentWeatherURL = CombineURL("weather?lat=" + lat + "&lon=" + lon + units);
+		}
+		$.getJSON(currentWeatherURL,
+			function(data) {
+				document.getElementById("currWeather").innerHTML = data.name;
+				document.getElementById("currWeatherType").innerHTML = "Current Weather: " + data.weather[0].main;
+				document.getElementById("currWeatherImg").innerHTML = "<img class=\"\" src=\"" + imgURL + data.weather[0].icon + ".png\"></img>";
+				document.getElementById("currTemp").innerHTML = "Current Temperature: " + data.main.temp + "°F";
+				LoadGMap(data.coord.lat, data.coord.lon);
+			}
+		);
+	}
+
+	//Verifies city not null, gets JSON data for forecast and displays in HTML
+	function GetForecast(city, lat, lon) {
+		if(city != null) {
+			forecastURL = CombineURL("/forecast/daily?q=" + city + units + "&cnt=5");
+		} else if(lat && lon != null) {
+			forecastURL = CombineURL("/forecast/daily?lat=" + lat + "&lon=" + lon + units + "&cnt=5");
+		}
+		$.getJSON(forecastURL,
+			function(data) {
+				for(var i = 0; i <= 4; i++) {
+					document.getElementById("d" + i + "hi").innerHTML = data.list[i].temp.max + "°F";
+					document.getElementById("d" + i + "lo").innerHTML = data.list[i].temp.min + "°F";
+				};
+			}
+		);
+	}
+
+	function GetLocation() {
+		navigator.geolocation.getCurrentPosition(
+			function(position){
+				geoLoc.lat = position.coords.latitude;
+				geoLoc.lon = position.coords.longitude;
+				GetCurrentWeather(null, geoLoc.lat, geoLoc.lon);
+				GetForecast(null, geoLoc.lat, geoLoc.lon);
+				LoadGMap(geoLoc.lat, geoLoc.lon);
+			});
+	}
+
+	function LoadGMap(lat, lng) {
+		var map = new google.maps.Map(document.getElementById("gmap"), { zoom: 14, center: { lat, lng} });
+	}
+	
+	function SetDays() {
+		var date = new Date();
+		var day = date.getDay();
+		var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+		for(var i = 2; i <= 5; i++) {
+			if(day <= 5) {
+				day += 1;
+			} else {
+				day = 0; 
+			}
+			console.log(days[day]);
+			document.getElementById("day" + i).innerHTML = days[day];
+		}
+	}
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQrm5lwkq0CCsV_0eaR0VC_6Bkx3o0LC8"></script>
