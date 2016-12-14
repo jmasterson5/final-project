@@ -1,3 +1,3 @@
 # Instructions for Running my Project
 
-Replace this text with the instructions your classmates will need to run your project. A complete stranger should be able to follow these instructions, so don't be afraid to include videos, screenshots, diagrams, text, whatever helps!
+Open the index.html, type in your name, and it will add numerically each letter in your name (a=1,b=2, etc.). Capital letters are worth more! (A=27, B=28, etc.)

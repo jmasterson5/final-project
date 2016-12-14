@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Name Worth</title>
+  <style>
+    body {
+    background-color: grey;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h2 {
+    font-family: monospace;
+  }
+    p {
+     font-family: Monospace;
+     color: green;
+     font-size: 19px;
+     font: bold;
+    }
+  </style>
+  <h2>Find Out What Your Name's Worth!</h2>
+</head>
+<script type="text/javascript">
+  function str_split(string, split_length) {
+  if (split_length == null) {
+    split_length = 1;
+  }
+  if (string == null || split_length < 1) {
+    return false;
+  }
+  string += '';
+  var chunks = [],
+    pos = 0,
+    len = string.length;
+  while (pos < len) {
+    chunks.push(string.slice(pos, pos += split_length));
+  }
+
+  return chunks;
+}
+
+
+function count(string){
+    var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+
+    var splitted_string = str_split(string);
+
+    var count = 0;
+    for (i = 0; i < splitted_string.length; i++) {
+        var letterPosition = letters.indexOf(splitted_string[i])+1;
+        count = count + letterPosition;
+    }
+    return count;
+}
+
+function update() {
+    var word = document.getElementById('text-1').value;
+    var value = count(word);
+    console.log("Value of " + word + " = " + value);
+    document.getElementById('results').innerHTML = value;
+}
+
+console.log(count("Ryan"));
+  </script>
+<body>
+<form onsubmit="update(); return false;">
+  <input id="text-1" type="text">
+  <input id="button-1" type="submit">
+  <p>
+    Your entire existance is valued at:
+  </p><div id="results">84</div>
+</form>
+</form>
+</body>
+</html>
