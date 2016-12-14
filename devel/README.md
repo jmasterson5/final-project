@@ -6,24 +6,24 @@ To run this project, all you need is an active internet connection, and a web br
 
 Start by downloading the .ZIP package of my project.
 
-![](https://zippy.gfycat.com/OffensivePlumpAstrangiacoral.webm)
+![](http://imgur.com/teDSEsn.gif)
 
 Navigate to where it downloaded on your computer.
 
-![](https://zippy.gfycat.com/AngelicDisastrousCurlew.webm)
+![](http://imgur.com/Oh3m4YI.gif)
 
 Unzip the package with something like Winrar or 7zip, or even Windows Explorer.
 
-![](https://zippy.gfycat.com/GrizzledYawningImperialeagle.webm)
+![](http://imgur.com/0ppwpRx.gif)
 
 Navigate to the **devel** folder.
 
-![](https://zippy.gfycat.com/FrayedSlimAsianwaterbuffalo.webm)
+![](http://imgur.com/o2n0mg8.gif)
 
 If weather.html shows up with an icon (Like Chrome or Firefox) already, just double click on it to open.
 
-![](https://zippy.gfycat.com/DismalAshamedAlligatorgar.webm)
+![](http://imgur.com/gjAttWk.gif)
 
 If not, simply drag weather.html into your web browser to open the project.
 
-![](https://zippy.gfycat.com/PleasedVagueGnat.webm)
+![](http://imgur.com/74aoTvk.gif)
