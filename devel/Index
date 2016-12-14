@@ -14,6 +14,7 @@
     <p class="center italic">Single player game</p>
     <p class="center">Let's see what you've got. Click on a space below to begin playing.
         <br>Good luck!</p>
+        <p id="difficultyDS" color="black">Difficulty level: Medium</p>
     <br>
     <br>
     <div id="board-outer" class="center">
@@ -39,7 +40,7 @@
     <br>
     <br>
     <div class="center button">
-      <button id="random">Very Easy</button>
+    <!--  <button id="random">Very Easy</button>-->
       <button id="easy">Easy</button>
       <button id="medium">Medium</button>
       <button id="hard">Hard</button>
@@ -81,7 +82,7 @@ var removec3 = "c3";
 
 var array =["a1", "a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3"];
 var setDifficulty
-var difficulty = "w";
+var difficulty = "y";
 var checkWin; // function that checks the board for winning combo
 var xWin = false; // true if X wins
 var oWin = false; // true if O wins
@@ -94,21 +95,24 @@ var clearBoard;
 // PLACES AN X OR O IN THE BOX WHEN CLICKED. TOGGLES.
 $(document).ready(function() {
   $("#hard").on("click", function(){
+    $("#difficultyDS").text("Difficulty level: Hard");
     difficulty = "z";
 
   })});
-  $(document).ready(function() {
+  /*$(document).ready(function() {
     $("#random").on("click", function(){
       difficulty = "w";
 
-    })});
+    })});*/
   $(document).ready(function() {
     $("#easy").on("click", function(){
+      $("#difficultyDS").text("Difficulty level: Easy");
       difficulty = "v";
 
     })});
     $(document).ready(function() {
       $("#medium").on("click", function(){
+        $("#difficultyDS").text("Difficulty level: Medium");
         difficulty = "y";
 
       })});
